@@ -1,0 +1,23 @@
+
+    <div class="container">
+      <img src="logo-removebg-preview.png" alt="Company Logo">
+      <label class="create-account-label">Create your account</label>
+      <!-- (ngSubmit)="submitForm()"  -->
+      <form [formGroup] = "signUpForm">
+        <input type="text" class="text-field" placeholder="First Name" formControlName="firstName">
+        <input type="text" class="text-field" placeholder="Last Name" formControlName="lastName">
+        <input type="text" class="text-field" placeholder="Username" formControlName="username">
+        <input type="password" class="text-field" placeholder="Password" formControlName="password">
+        <input type="text" class="text-field" placeholder="Organization" formControlName="organization">
+        <input type="text" class="text-field" placeholder="Contact Details" formControlName="contactDetails">
+        <button  class="continue-button" (click)="onSignUp()">Continue</button>
+        <!--  -->
+      </form>
+      <label class="login-label">
+        Already have an account?
+        <a routerLink="/login" class="login-link">Log in</a>
+      </label>
+    </div>
+    <div class="footer">
+      <label class="footer-label">Terms of use | Privacy policy</label>
+    </div>
